@@ -1,0 +1,672 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+:root {
+    --mainColor: #183e66;
+    --colorDark: #1D2231;
+    --textGrey: #8390A2;
+}
+
+.btn-toggle-nav a {
+    display: inline-flex;
+    padding: .1875rem .5rem;
+    margin-top: .125rem;
+    margin-left: 1.25rem;
+    text-decoration: none;
+}
+
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
+    background-color: #d2f4ea;
+}
+
+.dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Style the list item with class "4" (optional) */
+
+
+/* Style the anchor link */
+
+.d-content-docs {
+    text-decoration: none;
+    color: #f5f5f4;
+    padding-right: 0;
+    margin: 0;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+
+/* Style the first span (icon) */
+
+.dropdown a .las {
+    margin-right: 5px;
+    /* Adjust spacing as needed */
+}
+
+
+/* Hide the dropdown content by default */
+
+
+/* Style the dropdown container */
+
+.dropdown {
+    position: relative;
+}
+
+
+/* Style the main menu items */
+
+.dropdown>a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    /* Adjust the color as needed */
+    padding: 10px;
+}
+
+
+/* Style the icons in the main menu */
+
+.dropdown>a>span {
+    margin-right: 5px;
+}
+
+
+/* Style the dropdown container */
+
+.dropdown {
+    position: relative;
+}
+
+
+/* Style the main menu items */
+
+.sidebar-menu {
+    color: #ecf0f1;
+    padding: 20px;
+}
+
+.dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.active {
+    color: #3498db;
+}
+
+
+/* Updated styles for the dropdown content */
+
+.drop:hover .dropdown-content {
+    display: block;
+}
+
+.d-content-docs {
+    margin-bottom: 5px;
+}
+
+.las {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+
+/* Add transition for a smoother effect */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    box-shadow: 0 8px 16px rgba(252, 252, 252, 0.6);
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+}
+
+.dropdown,
+.dropdown-content {
+    transition: background-color 0.5s ease;
+}
+
+.drop:hover .dropdown-content {
+    display: block;
+}
+
+.sidebar {
+    width: 350px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: var(--mainColor);
+    z-index: 100;
+    transition: width 300ms;
+    -webkit-transition: width 300ms;
+    -moz-transition: width 300ms;
+    -ms-transition: width 300ms;
+    -o-transition: width 300ms;
+}
+
+.sidebar-brand {
+    height: 90px;
+    padding: 1rem 0 1rem 2rem;
+    color: #fff;
+}
+
+.sidebar-menue li {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.sidebar-menue a {
+    color: #fff;
+    display: block;
+    font-size: 1.1rem;
+    padding-left: 1rem;
+}
+
+.sidebar-menue a.active {
+    color: var(--mainColor);
+    background: #fff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 30px 0 0 30px;
+    -webkit-border-radius: 30px 0 0 30px;
+    -moz-border-radius: 30px 0 0 30px;
+    -ms-border-radius: 30px 0 0 30px;
+    -o-border-radius: 30px 0 0 30px;
+}
+
+.sidebar-menue a span:first-child {
+    font-size: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.sidebar-brand span {
+    display: inline-block;
+    padding-right: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, .2);
+    position: fixed;
+    top: 0;
+    left: 350px;
+    width: calc(100% - 350px);
+    z-index: 100;
+    transition: left 300ms;
+    -webkit-transition: left 300ms;
+    -moz-transition: left 300ms;
+    -ms-transition: left 300ms;
+    -o-transition: left 300ms;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+#nav-toggle:checked+.sidebar {
+    width: 100px;
+}
+
+#nav-toggle:checked+.sidebar .sidebar-brand h1 span:last-child,
+#nav-toggle:checked+.sidebar li a span:last-child {
+    display: none;
+}
+
+#nav-toggle:checked+.sidebar .sidebar-brand,
+#nav-toggle:checked+.sidebar li {
+    padding-left: 1rem;
+    text-align: center;
+}
+
+#nav-toggle:checked+.sidebar li a {
+    padding-left: 0rem;
+}
+
+#nav-toggle:checked~.mean-contnet {
+    margin-left: 70px;
+}
+
+#nav-toggle:checked~.mean-contnet header {
+    width: calc(100% - 70px);
+    left: 80px;
+}
+
+#nav-toggle:checked~header {
+    width: calc(100% - 70px);
+}
+
+.mean-contnet {
+    transition: margin-left 300ms;
+    margin-left: 350px;
+    -webkit-transition: margin-left 300ms;
+    -moz-transition: margin-left 300ms;
+    -ms-transition: margin-left 300ms;
+    -o-transition: margin-left 300ms;
+}
+
+header h2 {
+    color: #444;
+}
+
+header h2 span {
+    font-size: 1.7rem;
+    padding-right: 1rem;
+}
+
+.search-wraper {
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.search-wraper span {
+    display: inline-block;
+    padding: .69rem 1rem;
+    font-size: 1.5rem;
+}
+
+.search-wraper input {
+    border: none;
+    outline: none;
+    padding: .5rem;
+}
+
+.user-wraper {
+    display: flex;
+    align-items: center;
+}
+
+.user-wraper img {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.user-wraper div small {
+    display: block;
+    color: var(--textGray);
+    margin-top: 10px !important;
+}
+
+main {
+    margin-top: 90px;
+    background: #f0f0f0;
+    padding: 2rem 1.5rem;
+    min-height: calc(100vh - 90px);
+}
+
+
+/*  cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    margin-top: 1rem;
+}
+
+.single-card {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.single-card div:first-child span {
+    color: var(--textGray);
+    display: inline-block;
+    padding: 1rem 0;
+}
+
+.single-card span:first-child {
+    font-size: 3rem;
+    color: var(--mainColor)
+}
+
+.single-card:last-child {
+    background: var(--mainColor);
+    color: #fff;
+}
+
+.single-card .icon span,
+.single-card div.text:first-child span {
+    color: #fff;
+}
+
+.cards .single-card {
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+
+.anmaite {
+    -webkit-transform: translate(0, -20px);
+    -moz-transform: translate(0, -20px);
+    -ms-transform: translate(0, -20px);
+    -o-transform: translate(0, -20px);
+    box-shadow: 2px 2px 10px #999;
+}
+
+
+/* cusomers */
+
+.manage-wraper {
+    margin-top: 90px;
+    min-height: 100vh;
+    background: rgb(235, 235, 235);
+}
+
+.manage-wraper h4 {
+    color: #444;
+    padding: 2rem 0;
+}
+
+.manage-wraper .row {
+    margin: 2rem 0;
+}
+
+.btn-add {
+    background: var(--mainColor);
+    color: #fff;
+    margin-bottom: .5rem;
+}
+
+.manage-wraper .ser-wraper input {
+    border: none;
+    padding: .5rem 3rem;
+    border-radius: 5px;
+    width: 80%;
+    margin-bottom: .5rem;
+}
+
+.manage-wraper .ser-wraper button {
+    padding: .5rem 1rem;
+    border: none;
+    background: var(--mainColor);
+    color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.manage-wraper table {
+    background: #fff;
+}
+
+.manage-wraper table td span {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.manage-wraper table td span:first-child {
+    background: #28B463;
+}
+
+.manage-wraper table td span:nth-child(2) {
+    background: #EC7063;
+}
+
+.manage-wraper table td span:last-child {
+    background: #3498DB;
+}
+
+
+/* login form */
+
+.form-wraper {
+    height: 100vh;
+    padding: 50px 0;
+    background: linear-gradient(to bottom right, #28B463, #3498DB, #EC7063);
+}
+
+.form-login {
+    width: 30%;
+    margin: auto;
+    height: 520px;
+    background: #fff;
+    padding: 50px 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.form-login h2 {
+    text-transform: capitalize;
+    text-align: center;
+    color: #444;
+}
+
+.inputs p {
+    margin: 1rem 0;
+    text-transform: capitalize;
+}
+
+.inputs input {
+    padding: .5rem 0;
+    border: 1px solid rgb(224, 224, 224);
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    width: 60%;
+}
+
+div a.lost-pass {
+    display: block;
+    padding: 1rem 0;
+}
+
+.btn-login {
+    padding: .6rem 2rem;
+    background: #3498DB;
+    color: #fff;
+    font-size: 17px;
+    border: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.effet {
+    padding: .5rem 4rem;
+    box-shadow: 2px 2px 10px #ccc;
+    outline: none;
+    width: 80%;
+    transition: all .1s;
+    -webkit-transition: all .1s;
+    -moz-transition: all .1s;
+    -ms-transition: all .1s;
+    -o-transition: all .1s;
+}
+
+.btn-login:hover {
+    opacity: .8;
+}
+
+.pic {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: linear-gradient(to right, #EC7063, rgb(40, 101, 180), #839192);
+    margin: 30px auto;
+    padding: 5px;
+}
+
+.pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.inputs i {
+    font-size: 20px;
+}
+
+.link-lnag {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.link-lnag a {
+    width: 25px;
+    height: 25px;
+    background: #3498DB;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+
+.link-lnag a:hover {
+    background: #28B463;
+}
+
+
+/* form add new Customer */
+
+.add-cus-form {
+    width: 70%;
+    margin: auto;
+}
+
+.add-cus-form form h3 {
+    padding: 2rem 0;
+    color: #444;
+    font-family: sans-serif;
+}
+
+.add-cus-form span.line {
+    display: block;
+    width: 70%;
+    height: 1px;
+    background: #ccc;
+    margin-bottom: 2rem;
+}
+
+.add-cus-form p {
+    font-size: 18px;
+    font-family: sans-serif;
+    margin: 1rem 0;
+}
+
+.add-cus-form input {
+    width: 50%;
+    padding: .5rem 0;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+
+.card-single {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 2px;
+}
+
+.card-single div:first-child span {
+    color: var(--text-grey);
+}
+
+.card-single div:last-child span {
+    font-size: 3rem;
+    color: var(--main-color);
+}
+
+.card-single:last-child {
+    background: var(--main-color);
+}
+
+.card-single:last-child h1,
+.card-single:last-child div:last-child span,
+.card-single:last-child div:first-child span {
+    color: #fff;
+}
